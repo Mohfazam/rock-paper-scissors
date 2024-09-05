@@ -64,3 +64,19 @@ img{
     padding: 1rem;
     border-radius: 1rem;
 }
+
+
+#reset-btn{
+    margin-top: 3rem;
+    height: 50px;
+    width: 100px;
+    border-radius: 1rem;
+    background-color: rgb(5, 7, 38);
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+#reset-btn:hover{
+    transform: translateY(-5px);
+}

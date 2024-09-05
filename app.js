@@ -3,7 +3,7 @@ let compscore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
-
+const resetButton = document.querySelector("#reset-btn");
 
 const userscorepara = document.querySelector("#user-score");
 const compscorepara = document.querySelector("#comp-score");
@@ -60,9 +60,22 @@ const playgame = (userchoice) => {
     }
 };
 
+const resetGame = () => {
+    userscore = 0;
+    compscore = 0;
+    userscorepara.innerText = userscore;
+    compscorepara.innerText = compscore;
+    msg.innerText = "Play Your Move";
+    msg.style.backgroundColor = "#081b31";  // Default color
+};
+
+
 choices.forEach((choice) =>{
     choice.addEventListener("click", () => {
         const userchoice = choice.getAttribute("id");
         playgame(userchoice);
     });
 });
+
+
+resetButton.addEventListener("click", resetGame);
